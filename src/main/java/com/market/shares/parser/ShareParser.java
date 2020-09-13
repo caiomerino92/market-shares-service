@@ -7,30 +7,28 @@ import com.market.shares.model.response.ShareResponse;
 public class ShareParser {
 
     public static Share parse(ShareRequest shareRequest) {
-        return Share.builder()
-                .id(shareRequest.getId())
-                .ticket(shareRequest.getTicket())
-                .ticketAcronym(shareRequest.getTicketAcronym())
-                .price(shareRequest.getPrice())
-                .priceToEarnings(shareRequest.getPriceToEarnings())
-                .dividendYield(shareRequest.getDividendYield())
-                .pricePerBookValue(shareRequest.getPricePerBookValue())
-                .roe(shareRequest.getRoe())
-                .dailyLiquidity(shareRequest.getDailyLiquidity())
-                .build();
+        return new Share()
+                .setId(shareRequest.getId())
+                .setTicket(shareRequest.getTicket())
+                .setTicketAcronym(shareRequest.getTicketAcronym())
+                .setPrice(shareRequest.getPrice())
+                .setPriceToEarnings(shareRequest.getPriceToEarnings())
+                .setDividendYield(shareRequest.getDividendYield())
+                .setPricePerBookValue(shareRequest.getPricePerBookValue())
+                .setRoe(shareRequest.getRoe())
+                .setDailyLiquidity(shareRequest.getDailyLiquidity());
     }
 
     public static ShareResponse parse(Share share) {
-        return ShareResponse.builder()
-                .id(share.getId())
-                .ticket(share.getTicket())
-                .ticketAcronym(share.getTicketAcronym())
-                .price(share.getPrice())
-                .priceToEarnings(share.getPriceToEarnings())
-                .dividendYield(share.getDividendYield())
-                .pricePerBookValue(share.getPricePerBookValue())
-                .roe(share.getRoe())
-                .dailyLiquidity(share.getDailyLiquidity())
-                .build();
+        return new ShareResponse()
+                .setId(share.getId())
+                .setTicket(share.getTicket())
+                .setTicketAcronym(share.getTicketAcronym())
+                .setPrice(share.getPrice())
+                .setPriceToEarnings(share.getPriceToEarnings())
+                .setDividendYield(share.getDividendYield())
+                .setPricePerBookValue(share.getPricePerBookValue())
+                .setRoe(share.getRoe())
+                .setDailyLiquidity(share.getDailyLiquidity());
     }
 }
