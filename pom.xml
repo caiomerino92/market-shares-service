@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.merino.myactions</groupId>
-	<artifactId>myactions-service</artifactId>
+	<groupId>com.market.shares</groupId>
+	<artifactId>market-shares-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>myactions-service</name>
-	<description>MyActions Project</description>
+	<name>market-shares-service</name>
+	<description>My Market Share Project</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
