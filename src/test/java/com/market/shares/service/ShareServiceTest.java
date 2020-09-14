@@ -64,6 +64,8 @@ public class ShareServiceTest extends ServiceTest {
         Assert.assertNotNull(response.getDailyLiquidity());
         Assert.assertEquals(mockResponse.getDailyLiquidity(), response.getDailyLiquidity());
 
+        Mockito.verify(shareRepository, Mockito.times(1)).save(ArgumentMatchers.any());
+
     }
 
     @Test
@@ -75,6 +77,8 @@ public class ShareServiceTest extends ServiceTest {
 
         Assertions.assertThat(response).isNotNull();
         Assertions.assertThat(response.size()).isEqualTo(mockResponse.size());
+
+        Mockito.verify(shareRepository, Mockito.times(1)).findAll();
     }
 
     @Test
@@ -89,5 +93,7 @@ public class ShareServiceTest extends ServiceTest {
         Assertions.assertThat(response.getQuantity()).isEqualTo(200);
         Assertions.assertThat(response.getPrice()).isEqualTo(mockResponse.getPrice());
         Assertions.assertThat(response.getResult()).isEqualTo(mockResponse.getPrice().multiply(new BigDecimal(200)));
+
+        Mockito.verify(shareRepository, Mockito.times(1)).findByTicketAcronym(ArgumentMatchers.anyString());
     }
 }
