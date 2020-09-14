@@ -5,12 +5,12 @@ import com.market.shares.model.response.ShareResponse;
 
 import java.math.BigDecimal;
 
-public class ShareResquestMock {
+public class ShareMock {
 
     public static ShareRequest getShareRequest() {
         return new ShareRequest()
                 .setTicket("Banco do Brasil")
-                .setTicketAcronym("BBAS")
+                .setTicketAcronym("BBAS3")
                 .setPrice(new BigDecimal("32.03"))
                 .setPriceToEarnings(new BigDecimal("5.36"))
                 .setDividendYield(new BigDecimal("5.33"))
@@ -23,7 +23,7 @@ public class ShareResquestMock {
         return new ShareResponse()
                 .setId(1L)
                 .setTicket("Banco do Brasil")
-                .setTicketAcronym("BBAS")
+                .setTicketAcronym("BBAS3")
                 .setPrice(new BigDecimal("32.03"))
                 .setPriceToEarnings(new BigDecimal("5.36"))
                 .setDividendYield(new BigDecimal("5.33"))
